@@ -1,4 +1,4 @@
-# Kay’s Curries – Reddit Pain Point Finder
+# Reddit Pain Point Finder For Food E-Commerce
 
 ## Overview
 This project identifies real customer meal pain points from Reddit communities that align with Kay’s Curries’ product strengths.
