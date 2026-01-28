@@ -1,88 +1,62 @@
-Reddit Pain Point Finder
-Overview
+# Kay’s Curries – Reddit Pain Point Finder
 
-This project identifies real customer meal pain points from Reddit communities that closely match Kay’s Curries’ product strengths.
+## Overview
+This project identifies real customer meal pain points from Reddit communities that align with Kay’s Curries’ product strengths.
 
-Using Reddit RSS feeds and lightweight text filtering, it surfaces posts from travelers, campers, van-lifers, and people with dietary restrictions—groups that often struggle with cost, access to kitchens, and safe meals.
+Using Reddit RSS feeds and lightweight text filtering, it surfaces posts from travelers, campers, van-lifers, and people with dietary restrictions—groups that frequently struggle with food cost, kitchen access, and safe meals.
 
-The goal is to turn messy internet conversations into structured, AI-ready customer insights.
+The output is a structured, AI-ready dataset mapping customer pain to product fit.
 
-Data Sources
+---
 
-Reddit RSS feeds from:
+## Data Sources
+- r/VisitingIceland  
+- r/glutenfree  
+- r/Celiac  
+- r/camping  
+- r/backpacking  
+- r/vanlife  
+- r/EatCheapAndHealthy  
+- r/MealPrepSunday  
 
-r/VisitingIceland
+---
 
-r/glutenfree
+## Methodology
+1. Pull posts via Reddit RSS feeds  
+2. Filter for pain-signal keywords (cost, access, allergies, travel)  
+3. Remove low-signal content (megathreads, announcements)  
+4. Normalize titles into first-person customer pain statements  
+5. Tag where Kay’s Curries is a strong solution  
+6. Prioritize high-fit opportunities  
 
-r/Celiac
+---
 
-r/camping
+## Output
+The final dataset includes:
+- Source subreddit  
+- Post title and URL  
+- Normalized customer pain  
+- Kay’s Curries solution fit  
+- Priority flag  
 
-r/backpacking
+---
 
-r/vanlife
+## Tech Stack
+- Python  
+- pandas  
+- feedparser  
+- Regex-based NLP heuristics  
 
-r/EatCheapAndHealthy
+---
 
-r/MealPrepSunday
+## Use Case
+This pipeline converts unstructured online conversations into:
+- AI-ingestible customer insights  
+- Search and discovery signals  
+- Evidence-backed positioning inputs  
 
-Method
+---
 
-Pull posts via RSS (no scraping or auth)
-
-Filter for pain-signal keywords (cost, access, allergies, travel)
-
-Remove low-signal posts (megathreads, announcements, noise)
-
-Normalize titles into first-person customer pain statements
-
-Tag where Kay’s Curries is a strong solution
-
-Prioritize high-fit opportunities
-
-Output
-
-A structured dataset mapping:
-
-Customer pain
-
-Source community
-
-Relevant post links
-
-Kay’s Curries product fit
-
-Priority score
-
-Example pains:
-
-Traveling without a kitchen and need easy meals
-
-Finding quick, reliable gluten-free food
-
-Tech Stack
-
-Python
-
-pandas
-
-feedparser
-
-regex-based NLP heuristics
-
-Why This Matters
-
-This pipeline turns public customer frustration into:
-
-Search-ready insights
-
-AI-ingestible signals
-
-Evidence-based positioning opportunities
-
-It supports Kay’s Curries’ AI, content, and product strategy.
-
-Author
-
-Roman — Kay’s Curries AI Intern
+## Author
+Roman  
+Kay’s Curries AI Intern
